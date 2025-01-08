@@ -1,21 +1,42 @@
 ---
 import Container from "@/components/container.astro";
-import Cta from "@/components/cta.astro";
-import Features from "@/components/features.astro";
-import Hero from "@/components/hero.astro";
-import Logos from "@/components/logos.astro";
+import Cta from "@/components/home/cta.astro";
+import Features from "@/components/home/features.astro";
+import Hero from "@/components/home/hero.astro";
 import Layout from "@/layouts/Layout.astro";
-import Reimagine from "@/components/reimagine.astro";
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Reimagine from "@/components/home/reimagine.astro";
+import Pricing from "@/components/home/pricing.astro";
+import QA from "@/components/home/q&a.astro";
+import Stats from "@/components/home/stats.astro";
 ---
 
 <Layout title="Astroship">
   <Container>
-    <Hero />
+    <div
+      id="home-screen"
+      class:list={"flex flex-col items-center justify-center"}>
+      <Hero />
+      <Stats />
+    </div>
     <Reimagine />
-    <Features />
-    <Logos />
+    <Pricing />
     <Cta />
+    <QA />
   </Container>
 </Layout>
+
+<style>
+  @media (max-width: 1024px) {
+    #home-screen {
+      margin-top: 68px;
+      min-height: calc(100vh - 68px);
+    }
+  }
+
+  @media (min-width: 1025px) {
+    #home-screen {
+      margin-top: 83.2px;
+      min-height: calc(100vh - 83.2px);
+    }
+  }
+</style>

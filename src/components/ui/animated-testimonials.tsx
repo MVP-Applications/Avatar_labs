@@ -1,5 +1,6 @@
 import { motion, AnimatePresence } from "motion/react";
 import { useEffect, useState } from "react";
+import { Icon } from "@iconify/react";
 
 type Testimonial = {
   quote: string;
@@ -39,8 +40,8 @@ export const AnimatedTestimonials = ({
     return Math.floor(Math.random() * 21) - 10;
   };
   return (
-    <div className="max-w-sm md:max-w-4xl mx-auto antialiased font-sans px-4 md:px-8 lg:px-12 py-20">
-      <div className="relative grid grid-cols-1 md:grid-cols-2  gap-20">
+    <div className="max-w-sm md:max-w-4xl mx-auto antialiased font-sans px-4 md:px-8 lg:px-12 md:py-20 py-8">
+      <div className="relative grid grid-cols-1 md:grid-cols-2  md:gap-20 gap-8">
         <div>
           <div className="relative h-80 w-full">
             <AnimatePresence>
@@ -143,12 +144,18 @@ export const AnimatedTestimonials = ({
             <button
               onClick={handlePrev}
               className="h-7 w-7 rounded-full bg-gray-100 dark:bg-neutral-800 flex items-center justify-center group/button">
-              {/* <IconArrowLeft className="h-5 w-5 text-black dark:text-neutral-400 group-hover/button:rotate-12 transition-transform duration-300" /> */}
+              <Icon
+                icon={"bx:left-arrow-alt"}
+                className="h-5 w-5 text-black dark:text-neutral-400 group-hover/button:rotate-12 transition-transform duration-300"
+              />
             </button>
             <button
               onClick={handleNext}
               className="h-7 w-7 rounded-full bg-gray-100 dark:bg-neutral-800 flex items-center justify-center group/button">
-              {/* <IconArrowRight className="h-5 w-5 text-black dark:text-neutral-400 group-hover/button:-rotate-12 transition-transform duration-300" /> */}
+              <Icon
+                icon={"bx:right-arrow-alt"}
+                className="h-5 w-5 text-black dark:text-neutral-400 group-hover/button:-rotate-12 transition-transform duration-300"
+              />
             </button>
           </div>
         </div>

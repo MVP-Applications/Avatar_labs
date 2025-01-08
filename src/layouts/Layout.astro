@@ -23,27 +23,6 @@ const { title } = Astro.props;
 const makeTitle = title
   ? title + " | " + "Astroship"
   : "Astroship - Starter Template for Astro with Tailwind CSS";
-
-import Particles from "astro-particles";
-import type { ISourceOptions } from "tsparticles-engine";
-import Container from "@/components/container.astro";
-
-const options: ISourceOptions = {
-  background: {
-    color: "#000",
-  },
-  fullScreen: {
-    zIndex: -1,
-  },
-  particles: {
-    number: {
-      value: 100,
-    },
-    move: {
-      enable: true,
-    },
-  },
-};
 ---
 
 <!doctype html>
@@ -76,7 +55,7 @@ const options: ISourceOptions = {
       }}
     />
   </head>
-  <body class:list="dark">
+  <body>
     <Navbar />
     <slot />
     <Footer />
@@ -93,11 +72,11 @@ const options: ISourceOptions = {
     <script>
       import { tsParticles } from "@tsparticles/engine";
       import { loadFull } from "tsparticles";
-      import { loadStarsPreset } from "@tsparticles/preset-stars";
+      import { loadLinksPreset } from "@tsparticles/preset-links";
 
       (async () => {
         await loadFull(tsParticles);
-        await loadStarsPreset(tsParticles);
+        await loadLinksPreset(tsParticles);
 
         await tsParticles.load({
           id: "tsparticles",
@@ -105,10 +84,21 @@ const options: ISourceOptions = {
             background: {
               color: "#000",
             },
-            fullScreen: {
-              zIndex: -1,
+            style: {
+              opacity: "0.5",
             },
-            preset: "stars",
+            fullScreen: {
+              zIndex: -50,
+            },
+            particles: {
+              number: {
+                value: 150,
+                density: {
+                  enable: true,
+                },
+              },
+            },
+            preset: "links",
           },
         });
       })();

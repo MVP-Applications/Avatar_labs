@@ -1,27 +1,35 @@
 ---
-import { AnimatedTestimonials } from "./ui/animated-testimonials";
+import type { lazy } from "astro:schema";
+import { AnimatedTestimonials } from "../ui/animated-testimonials";
 
 const testimonials = [
   {
     quote:
       "A fit male with a muscular build, lifting weights in a brightly lit gym. He wears a tank top and shorts, with visible sweat and defined muscles reflecting the effort of his workout.",
-    name: "Mohammed Rashid",
+    name: "Example 1",
     designation: "",
-    src: "/assets/profiles/mohammed-rashid-1.JPG",
+    src: "/assets/profiles/example-1.jpg",
   },
   {
     quote:
-      "Male model In beige cashmere sweater over white collared shirt, light khaki trousers, strolling on deck of luxury yacht, ocean sparkling under mid-morning sun.",
-    name: "Zuhaib Khalifa",
+      "A male character standing on the deck of a luxurious yacht, docked in Monaco’s glamorous marina. He wears a tailored white shirt and sunglasses, with the sparkling Mediterranean Sea and the iconic hillside cityscape in the background.",
+    name: "Example 2",
     designation: "",
-    src: "/assets/profiles/zuhaib-khalifa-1.jpg",
+    src: "/assets/profiles/example-2.jpg",
   },
   {
     quote:
       "A male character standing confidently near the Eiffel Tower, dressed in a stylish trench coat and scarf. His expression shows curiosity and calm as he gazes at the towering structure.",
-    name: "Dylan",
+    name: "Example 3",
     designation: "",
-    src: "/assets/profiles/dylan-1.jpeg",
+    src: "/assets/profiles/example-3.jpg",
+  },
+  {
+    quote:
+      "A bride in an elegant, traditional wedding gown with intricate embroidery, a flowing veil, and a serene expression, holding a vibrant bouquet. The setting is softly blurred, enhancing depth.",
+    name: "Example 4",
+    designation: "",
+    src: "/assets/profiles/example-4.jpg",
   },
 ];
 ---

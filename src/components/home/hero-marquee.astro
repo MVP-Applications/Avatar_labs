@@ -1,0 +1,31 @@
+---
+import { InfiniteMovingCards } from "../ui/infinite-moving-cards";
+
+const url =
+  "https://arabai-images.s3.me-south-1.amazonaws.com/202412-3005-1204-4aeb12f3-9d2a-4f73-95f5-6d53860f5ce4_1735521124.jpeg";
+
+const marquee1 = Array.from({ length: 8 }).map((_) => url);
+const marquee2 = Array.from({ length: 12 }).map((_) => url);
+const marquee3 = Array.from({ length: 6 }).map((_) => url);
+---
+
+<div class="absolute w-full top-1/2 -translate-y-1/2 opacity-50 -z-10">
+  <InfiniteMovingCards
+    items={marquee1}
+    direction="right"
+    speed="slow"
+    client:load
+  />
+  <InfiniteMovingCards
+    items={marquee2}
+    direction="right"
+    speed="slow"
+    client:load
+  />
+  <InfiniteMovingCards
+    items={marquee3}
+    direction="right"
+    speed="slow"
+    client:load
+  />
+</div>

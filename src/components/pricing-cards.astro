@@ -1,8 +1,5 @@
 ---
-import Layout from "@/layouts/Layout.astro";
-import Container from "@/components/container.astro";
-import Sectionhead from "@/components/sectionhead.astro";
-import PricingCards from "@/components/pricing-cards.astro";
+import PricingCard from "@/components/pricing-card.astro";
 
 export const pricing = [
   {
@@ -49,15 +46,9 @@ export const pricing = [
 ];
 ---
 
-<Layout title="Pricing">
-  <Container class="mt-28">
-    <Sectionhead>
-      <Fragment slot="title">Pricing</Fragment>
-      <Fragment slot="desc">
-        Simple & Predictable pricing. No Surprises.
-      </Fragment>
-    </Sectionhead>
-
-    <PricingCards />
-  </Container>
-</Layout>
+<div class="w-full">
+  <div
+    class="grid md:grid-cols-2 gap-10 mx-auto md:max-w-[700px] max-w-[350px] mt-12">
+    {pricing.map((item) => <PricingCard plan={item} />)}
+  </div>
+</div>

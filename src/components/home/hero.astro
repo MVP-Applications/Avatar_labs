@@ -1,0 +1,44 @@
+---
+import HeroMarquee from "./hero-marquee.astro";
+import Link from "@/components/ui/link.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<main
+  class="flex items-center justify-center pt-16 pb-8 md:pt-12 md:pb-12"
+  id="title">
+  <HeroMarquee />
+  <div class="absolute inset-0 -z-10 h-full w-full" id="radial"></div>
+  <div class="w-full flex flex-col items-center">
+    <h1
+      class="lg:text-6xl md:text-5xl text-4xl font-bold lg:tracking-tight xl:tracking-tighter text-center">
+      AvatarLabs: Create Professional Images
+    </h1>
+    <p
+      class="lg:text-lg md:text-base text-sm mt-4 text-slate-200 max-w-2xl text-center">
+      AvatarLabs is a revolutionary AI image generation tool that allows you to
+      create stunning, high-quality images with just a few clicks. <wbr
+      />Whether you need a new profile picture, a custom avatar, or a unique
+      image for your website, AvatarLabs has got you covered.
+    </p>
+    <div class="mt-6 flex flex-col sm:flex-row gap-3">
+      <Link
+        href="#"
+        class="flex gap-1 items-center justify-center"
+        rel="noopener">
+        <Icon class="text-black w-5 h-5" name="bx:cloud-download" />
+        Download the App
+      </Link>
+    </div>
+  </div>
+</main>
+
+<style>
+  #radial {
+    background: radial-gradient(
+      circle,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(255, 255, 255, 0) 80%
+    );
+  }
+</style>
