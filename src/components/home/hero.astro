@@ -4,11 +4,12 @@ import Link from "@/components/ui/link.astro";
 import { Icon } from "astro-icon/components";
 ---
 
+<div class="absolute inset-0 -z-10 h-full w-full" id="radial"></div>
+
 <main
-  class="flex items-center justify-center pt-16 pb-8 md:pt-12 md:pb-12"
+  class="flex items-center justify-center pt-16 pb-8 md:pt-12 md:pb-12 relative"
   id="title">
   <HeroMarquee />
-  <div class="absolute inset-0 -z-10 h-full w-full" id="radial"></div>
   <div class="w-full flex flex-col items-center">
     <h1
       class="lg:text-6xl md:text-5xl text-4xl font-bold lg:tracking-tight xl:tracking-tighter text-center">
