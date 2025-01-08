@@ -1,0 +1,43 @@
+---
+import { AnimatedTestimonials } from "./ui/animated-testimonials";
+
+const testimonials = [
+  {
+    quote:
+      "A fit male with a muscular build, lifting weights in a brightly lit gym. He wears a tank top and shorts, with visible sweat and defined muscles reflecting the effort of his workout.",
+    name: "Mohammed Rashid",
+    designation: "",
+    src: "/assets/profiles/mohammed-rashid-1.JPG",
+  },
+  {
+    quote:
+      "Male model In beige cashmere sweater over white collared shirt, light khaki trousers, strolling on deck of luxury yacht, ocean sparkling under mid-morning sun.",
+    name: "Zuhaib Khalifa",
+    designation: "",
+    src: "/assets/profiles/zuhaib-khalifa-1.jpg",
+  },
+  {
+    quote:
+      "A male character standing confidently near the Eiffel Tower, dressed in a stylish trench coat and scarf. His expression shows curiosity and calm as he gazes at the towering structure.",
+    name: "Dylan",
+    designation: "",
+    src: "/assets/profiles/dylan-1.jpeg",
+  },
+];
+---
+
+<div class="mt-16 md:mt-0 grid grid-cols-1 md:grid-cols-3 gap-4">
+  <div class="flex flex-col justify-center">
+    <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+      Reimagine yourself with AvatarLabs
+    </h2>
+    <p class="text-lg mt-4 text-slate-200">
+      Use your pictures with AvatarLabs to create your own professional AI
+      avatar. You can use it for your social media, profile picture, and more!
+    </p>
+  </div>
+
+  <div class="coll-span-1 md:col-span-2">
+    <AnimatedTestimonials testimonials={testimonials} client:load />
+  </div>
+</div>
