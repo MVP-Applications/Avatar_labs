@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://avatarlabs.rvamp.com/sitemap-index.xml

@@ -7,13 +7,16 @@ import tailwind from '@astrojs/tailwind';
 
 import icon from "astro-icon";
 
+import sitemap from "@astrojs/sitemap";
+
 export default defineConfig({
-  site: "https://avatar-labs.com",
+  site: "https://avatarlabs.rvamp.com",
   integrations: [
     react(),
     tailwind({
       applyBaseStyles: false,
     }),
     icon(),
+    sitemap(),
   ]
 });

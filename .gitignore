@@ -22,3 +22,7 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# remove development files
+prd_staging.bat
+scp_server.ppk
