@@ -4,10 +4,13 @@ import Link from "@/components/ui/link.astro";
 import { Icon } from "astro-icon/components";
 ---
 
-<div class="absolute inset-0 -z-10 h-full w-full" id="radial"></div>
+<div
+  class="absolute inset-0 -z-10 h-full w-screen left-1/2 -translate-x-1/2"
+  id="radial">
+</div>
 
 <main
-  class="flex items-center justify-center pt-16 pb-8 md:pt-12 md:pb-12 relative"
+  class="flex items-center justify-center pt-16 pb-8 md:pt-12 md:pb-12 relative w-full"
   id="title">
   <HeroMarquee />
   <div class="w-full flex flex-col items-center">
@@ -39,7 +42,7 @@ import { Icon } from "astro-icon/components";
     background: radial-gradient(
       circle,
       rgba(0, 0, 0, 1) 0%,
-      rgba(255, 255, 255, 0) 80%
+      rgba(255, 255, 255, 0) 75%
     );
   }
 </style>

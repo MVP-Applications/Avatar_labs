@@ -82,9 +82,7 @@ export const InfiniteMovingCards = ({
         {items.map((item, idx) => (
           <li
             className={cn(
-              "aspect-video relative rounded-2xl overflow-hidden border border-b-0 flex-shrink-0 border-slate-700 px-8 py-6",
-              `w-[${width}px]`,
-              `md:w-[${width}px]`,
+              "h-32 aspect-video relative rounded-2xl overflow-hidden border border-b-0 flex-shrink-0 border-slate-700 px-8 py-6",
             )}
             style={{
               background:

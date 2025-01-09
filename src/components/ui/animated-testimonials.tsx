@@ -142,6 +142,7 @@ export const AnimatedTestimonials = ({
           </motion.div>
           <div className="flex gap-4 pt-12 md:pt-0">
             <button
+              aria-label="Previous example image"
               onClick={handlePrev}
               className="h-7 w-7 rounded-full bg-gray-100 dark:bg-neutral-800 flex items-center justify-center group/button">
               <Icon
@@ -150,6 +151,7 @@ export const AnimatedTestimonials = ({
               />
             </button>
             <button
+              aria-label="Next example image"
               onClick={handleNext}
               className="h-7 w-7 rounded-full bg-gray-100 dark:bg-neutral-800 flex items-center justify-center group/button">
               <Icon

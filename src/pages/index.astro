@@ -11,10 +11,10 @@ import Stats from "@/components/home/stats.astro";
 ---
 
 <Layout title="Astroship">
-  <Container>
+  <Container class="overflow-hidden">
     <div
       id="home-screen"
-      class:list={"flex flex-col items-center justify-center"}>
+      class:list={"flex flex-col items-center justify-center relative"}>
       <Hero />
       <Stats />
     </div>
